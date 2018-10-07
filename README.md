@@ -1,24 +1,48 @@
-# README
+## productsテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|price|integer|
+|genre|string|
+|text|text|
+|user_id|references|null: false, foreign_key: true|
 
-Things you may want to cover:
+### Association
+- belongs_to :genre
+- belongs_to :user
+- has_many   :images
 
-* Ruby version
 
-* System dependencies
+## usersテーブル
 
-* Configuration
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false, unique:true|
+|password|string|null: false|
 
-* Database creation
+### Association
+- has_many :products
 
-* Database initialization
 
-* How to run the test suite
+## imagesテーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+|Column|Type|Options|
+|------|----|-------|
+|text|string|
+|products_id|references|null: false, foreign_key: true|
 
-* Deployment instructions
+### Association
+- belongs_to :products
 
-* ...
+
+## genresテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|
+|products_id|references|null: false, foreign_key: true|
+
+### Association
+- has_many :products
