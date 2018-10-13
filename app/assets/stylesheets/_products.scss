@@ -1,0 +1,152 @@
+.main__page {
+  font-family: 'Anton','Lalezar', cursive;
+
+//ナビゲーション部分
+
+  &__nav {
+    height: 90px;
+    color: $white;
+    background-color: $black;
+    display: flex;
+    justify-content: center; /* 子要素を中央揃え */
+    position: relative;
+
+    &__logo {
+      font-size: 20px;
+      padding-left: 20px;
+      line-height: 90px;
+      position: absolute;
+      left: 0;
+
+    }
+
+    &__genres {
+      font-size: 30px;
+      padding-left: 0px;
+      line-height: 90px;
+
+      .main__page__nav__genre {
+        width: 130px;
+        text-align: center;
+        display: inline-block;
+      }
+    }
+
+    &__items {
+      font-size: 20px;
+      padding-left: 0px;
+      line-height: 90px;
+      position: absolute;
+      right: 0;
+
+     .main__page__nav__item {
+       display: inline-block;
+      }
+    }
+  }
+
+  //コンテンツ部分
+
+  .main__page__contents {
+    width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+
+    .main__page__content {
+      width: 800px;
+      height: 450px;
+      border: 2px solid #e0e0e0;
+
+      .main__page__content__images{
+        width: 500px;
+        height: 440px;
+        margin: 5px 0 5px 0;
+        border: 1px solid #e0e0e0;
+        -webkit-box-sizing: border-box;
+        float: left;
+
+        .main__image {
+          width: 300px;
+          height: 400px;
+          margin: 20px 0 20px 10px;
+          border: 1px solid #e0e0e0;
+          -webkit-box-sizing: border-box;
+          float: left;
+        }
+
+        .sub__images {
+          width: 180px;
+          height: 400px;
+          margin: 20px 0 20px 0;
+          border: 1px solid #e0e0e0;
+          -webkit-box-sizing: border-box;
+          float: right;
+
+          .sub__image {
+            width: 120px;
+            height: 160px;
+            margin: 26px 0 26px 30px;
+            border: 1px solid #e0e0e0;
+            -webkit-box-sizing: border-box;
+          }
+        }
+      }
+
+      .main__page__content__details{
+        width: 300px;
+        height: 400px;
+        margin: 25px 0 25px 0;
+        border: 1px solid #e0e0e0;
+        -webkit-box-sizing: border-box;
+        float: right;
+        position: relative;
+
+        .product__detail {
+          height: 50px;
+          margin: 0 10px;
+          line-height: 50px;
+          border-bottom: 1px solid #e0e0e0;
+          -webkit-box-sizing: border-box;
+        }
+
+        .product__detail__text__area {
+          height: 120px;
+          margin: 0 10px;
+          border-bottom: 1px solid #e0e0e0;
+          word-wrap:break-word;
+          -webkit-box-sizing: border-box;
+          position: relative;
+
+          .product__detail__text {
+            margin-top: 10px;
+             -webkit-box-sizing: border-box;
+          }
+        }
+
+        .products__actions {
+          position: absolute;
+          left: 20px;
+          bottom: 40px;
+
+
+          .products__action{
+             width: 70px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            float: left;
+            background-color: #FDD835;
+            margin-right: 20px;
+            font-size: 16px;
+            /*border: 1px solid #FFA726;*/
+            border-radius: 3px;
+
+          }
+        }
+
+
+      }
+
+    }
+  }
+}
