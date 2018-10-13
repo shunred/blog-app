@@ -17,7 +17,10 @@
       line-height: 90px;
       position: absolute;
       left: 0;
+    }
 
+    &__logo :visited {
+      color: $white;
     }
 
     &__genres {
@@ -30,6 +33,11 @@
         text-align: center;
         display: inline-block;
       }
+
+      .main__page__nav__genre :visited {
+        color: $white;
+      }
+
     }
 
     &__items {
@@ -41,6 +49,10 @@
 
      .main__page__nav__item {
        display: inline-block;
+      }
+
+      .main__page__nav__item :visited{
+       color: $white;
       }
     }
   }
