@@ -1,0 +1,40 @@
+%div.main__page
+  %div.main__page__nav
+    %h3.main__page__nav__logo
+      =link_to 'MY COLLECTION', root_path
+    %ul.main__page__nav__genres
+      %li.main__page__nav__genre
+        =link_to "Hot Toys", '/genres/1/products'
+      %li.main__page__nav__genre
+        =link_to "POP!", '/genres/2/products'
+      %li.main__page__nav__genre
+        =link_to "Others", '/genres/3/products'
+    %ul.main__page__nav__items
+      %li.main__page__nav__item SingIn
+      %li.main__page__nav__item SignOut
+      %li.main__page__nav__item
+        =link_to "New", new_product_path
+  = form_for(@product) do |f|
+    %div.form__field
+      %div.form__field-left
+        = f.label :name
+      %div.form__field-right
+        = f.text_field :name
+    %div.form__field
+      %div.form__field-left
+        = f.label :price
+      %div.form__field-right
+        = f.text_field :price
+    %div.form__field
+      %div.form__field-left
+        = f.label :genre
+      %div.form__field-right
+        = f.collection_check_boxes :genre_id, Genre.all, :id, :name
+    %div.form__field
+      %div.form__field-left
+        = f.label :text
+      %div.form__field-right
+        = f.text_field :text
+    %div.form__field
+      %div.form__field-botton
+        = f.submit "Send"
