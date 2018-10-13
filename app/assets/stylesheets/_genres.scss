@@ -1,0 +1,92 @@
+.top__page {
+  font-family: 'Anton','Lalezar', cursive;
+
+
+  &__nav {
+    height: 90px;
+    color: $white;
+    background-color: $black;
+
+    &__title {
+      font-size: 50px;
+      text-align: center;
+      line-height: 90px;
+    }
+  }
+
+  &__image {
+
+    background-image: image-url("555-1_mcu10th.jpg");
+    height: 600px;
+    background-size: cover;
+    padding-top: 100px;
+
+    .top__page__genres {
+      // margin-top: 100px;
+      text-align: center;
+
+      .top__page__genre {
+        height: 400px;
+        width: 285px;
+        margin: 0 15px;
+        border: solid 1px black;
+        display: inline-block;
+        position: relative;
+
+        &-name {
+          font-size: 50px;
+          height: 200px;
+          width: 285px;
+          position: absolute;
+          bottom: 0;
+        }
+
+        .genre-name-left {
+          background-color: $hottoys_red;
+          opacity: 0.8;
+          p {
+            line-height: 200px;
+            color: $white;
+          }
+        }
+
+        .genre-name-center {
+          background-color: $pop_blue;
+          opacity: 0.8;
+          p {
+            color: $white;
+            line-height: 200px;
+          }
+        }
+
+        .genre-name-right {
+          background-color: $others_green;
+          opacity: 0.8;
+          p {
+            color: $white;
+            line-height: 200px;
+          }
+        }
+
+      }
+
+      .genre-image-left {
+        background-image: image-url("o0600090013624334892.jpg");
+        background-size: cover;
+      }
+
+      .genre-image-center {
+        background-image: image-url("FUNK001389-600x600.jpg");
+        background-size: cover;
+      }
+
+      .genre-image-right {
+        background-image: image-url("611Ane-QTmL._SL1000_.jpg");
+        background-size: cover;
+      }
+
+    }
+
+  }
+
+}
