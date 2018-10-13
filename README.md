@@ -4,8 +4,8 @@
 |------|----|-------|
 |name|string|null: false|
 |price|integer|
-|genre|string|
 |text|text|
+|genre_id|references|null: false, foreign_key: true|
 |user_id|references|null: false, foreign_key: true|
 
 ### Association
@@ -42,7 +42,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|
-|products_id|references|null: false, foreign_key: true|
 
 ### Association
 - has_many :products
