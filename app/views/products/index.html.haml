@@ -31,4 +31,5 @@
           %ul.products__actions
             %li.products__action
               =link_to "EDIT", edit_product_path(product)
-            %li.products__action DESTROY
+            %li.products__action
+              =link_to "DESTROY", "/products/#{product.id}", method: :delete

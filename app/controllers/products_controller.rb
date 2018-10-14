@@ -24,6 +24,12 @@ class ProductsController < ApplicationController
     redirect_to controller: 'genres', action: 'index'
   end
 
+  def destroy
+    product = Product.find(params[:id])
+    product.destroy
+    redirect_to controller: 'genres', action: 'index'
+  end
+
   private
   def products_params
     params.require(:product).permit(:name, :price, :text, :genre_id)
