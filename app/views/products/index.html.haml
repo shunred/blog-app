@@ -29,6 +29,6 @@
           %div.product__detail__text__area
             %p.product__detail__text=product.text
           %ul.products__actions
-            %li.products__action SHOW
-            %li.products__action EDIT
+            %li.products__action
+              =link_to "EDIT", edit_product_path(product)
             %li.products__action DESTROY

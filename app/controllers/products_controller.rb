@@ -14,6 +14,16 @@ class ProductsController < ApplicationController
     redirect_to controller: 'genres', action: 'index'
   end
 
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    product = Product.find(params[:id])
+    product.update(products_params)
+    redirect_to controller: 'genres', action: 'index'
+  end
+
   private
   def products_params
     params.require(:product).permit(:name, :price, :text, :genre_id)
