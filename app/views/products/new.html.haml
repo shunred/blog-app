@@ -14,7 +14,7 @@
       %li.main__page__nav__item SignOut
       %li.main__page__nav__item
         =link_to "New", new_product_path
-  = form_for(@product) do |f|
+  = form_for @product do |f|
     %div.form__field
       %div.form__field-left
         = f.label :name
@@ -29,7 +29,7 @@
       %div.form__field-left
         = f.label :genre
       %div.form__field-right
-        = f.collection_check_boxes :genre_id, Genre.all, :id, :name
+        = f.collection_check_boxes :genre_ids, Genre.all, :id, :name
     %div.form__field
       %div.form__field-left
         = f.label :text
