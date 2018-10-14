@@ -29,7 +29,7 @@
       %div.form__field-left
         = f.label :genre
       %div.form__field-right
-        = f.collection_check_boxes :genre_ids, Genre.all, :id, :name
+        = f.collection_select :genre_id, Genre.all, :id, :name
     %div.form__field
       %div.form__field-left
         = f.label :text

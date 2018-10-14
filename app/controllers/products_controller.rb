@@ -10,13 +10,12 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.create(products_params)
-    @product.save
+    Product.create(products_params)
     redirect_to controller: 'genres', action: 'index'
   end
 
   private
   def products_params
-    params.require(:product).permit(:name, :price, :text, { :genre_ids => [] })
+    params.require(:product).permit(:name, :price, :text, :genre_id)
   end
 end
