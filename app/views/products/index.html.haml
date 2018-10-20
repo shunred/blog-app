@@ -10,8 +10,10 @@
       %li.main__page__nav__genre
         =link_to "Others"
     %ul.main__page__nav__items
-      %li.main__page__nav__item SingIn
-      %li.main__page__nav__item SignOut
+      %li.main__page__nav__item
+        =link_to "SingIn", new_user_session_path
+      %li.main__page__nav__item
+        =link_to "SignOut", destroy_user_session_path
       %li.main__page__nav__item
         =link_to "New", new_product_path
   %div.main__page__contents

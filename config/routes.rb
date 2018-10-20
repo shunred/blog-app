@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'genres#index'
 
   resources :products, only: [:new, :create, :edit, :update, :destroy]
