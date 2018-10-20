@@ -1,8 +1,9 @@
 class ProductsController < ApplicationController
+  before_action :move_to_index, except: :index
 
   def index
     @genre = Genre.find(params[:genre_id])
-    @products = @genre.products
+    @products = @genre.products.includes(:user)
   end
 
   def new
@@ -32,6 +33,10 @@ class ProductsController < ApplicationController
 
   private
   def products_params
-    params.require(:product).permit(:name, :price, :text, :genre_id)
+    params.require(:product).permit(:name, :price, :text, :genre_id).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    redirect_to action: "index" unless user_signed_in?
   end
 end
