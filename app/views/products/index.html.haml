@@ -9,13 +9,16 @@
         =link_to "POP!"
       %li.main__page__nav__genre
         =link_to "Others"
-    %ul.main__page__nav__items
-      %li.main__page__nav__item
-        =link_to "SingIn", new_user_session_path
-      %li.main__page__nav__item
-        =link_to "SignOut", destroy_user_session_path
-      %li.main__page__nav__item
-        =link_to "New", new_product_path
+    - if user_signed_in?
+      %ul.main__page__nav__items
+        %li.main__page__nav__item
+          =link_to "SignOut", destroy_user_session_path, method: :delete
+        %li.main__page__nav__item
+          =link_to "New", new_product_path
+    - else
+      %ul.main__page__nav__items
+        %li.main__page__nav__item
+          =link_to "SingIn", new_user_session_path
   %div.main__page__contents
     - @products.each do |product|
       %div.main__page__content
