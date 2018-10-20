@@ -43,8 +43,8 @@
 
         .genre-name-left {
           background-color: $hottoys_red;
-          opacity: 0.8;
-          p {
+          opacity: 0.85;
+          a {
             line-height: 200px;
             color: $white;
           }
@@ -52,8 +52,8 @@
 
         .genre-name-center {
           background-color: $pop_blue;
-          opacity: 0.8;
-          p {
+          opacity: 0.85;
+          a {
             color: $white;
             line-height: 200px;
           }
@@ -61,8 +61,8 @@
 
         .genre-name-right {
           background-color: $others_green;
-          opacity: 0.8;
-          p {
+          opacity: 0.85;
+          a {
             color: $white;
             line-height: 200px;
           }

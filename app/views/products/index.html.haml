@@ -1,0 +1,35 @@
+%div.main__page
+  %div.main__page__nav
+    %h3.main__page__nav__logo
+      =link_to 'MY COLLECTION'
+    %ul.main__page__nav__genres
+      %li.main__page__nav__genre
+        =link_to "Hot Toys"
+      %li.main__page__nav__genre
+        =link_to "POP!"
+      %li.main__page__nav__genre
+        =link_to "Others"
+    %ul.main__page__nav__items
+      %li.main__page__nav__item SingIn
+      %li.main__page__nav__item SignOut
+      %li.main__page__nav__item
+        =link_to "New", new_product_path
+  %div.main__page__contents
+    - @products.each do |product|
+      %div.main__page__content
+        %div.main__page__content__images
+          %div.main__image
+          %div.sub__images
+            %div.sub__image
+            %div.sub__image
+        %div.main__page__content__details
+          %p.product__detail.product__name=product.name
+          %p.product__detail.product__price=product.price
+          %p.product__detail.product__genre=product.genre.name
+          %div.product__detail__text__area
+            %p.product__detail__text=product.text
+          %ul.products__actions
+            %li.products__action
+              =link_to "EDIT", edit_product_path(product)
+            %li.products__action
+              =link_to "DESTROY", "/products/#{product.id}", method: :delete
