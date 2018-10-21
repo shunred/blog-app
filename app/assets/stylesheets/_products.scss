@@ -85,6 +85,12 @@
           border: 1px solid #e0e0e0;
           -webkit-box-sizing: border-box;
           float: left;
+          text-align: center;
+
+          img {
+            max-width: 300px;
+            max-height: 400px;
+          }
         }
 
         .sub__images {
@@ -101,6 +107,12 @@
             margin: 26px 0 26px 30px;
             border: 1px solid #e0e0e0;
             -webkit-box-sizing: border-box;
+            text-align: center;
+
+            img {
+              max-width: 120px;
+              max-height: 160px;
+            }
           }
         }
       }
