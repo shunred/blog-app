@@ -21,14 +21,18 @@ class ProductsController < ApplicationController
 
   def update
     product = Product.find(params[:id])
+    if product.user.id == current_user.id
     product.update(products_params)
     redirect_to controller: 'genres', action: 'index'
+    end
   end
 
   def destroy
     product = Product.find(params[:id])
+    if product.user.id == current_user.id
     product.destroy
     redirect_to controller: 'genres', action: 'index'
+    end
   end
 
   private
@@ -39,4 +43,5 @@ class ProductsController < ApplicationController
   def move_to_index
     redirect_to action: "index" unless user_signed_in?
   end
+
 end
